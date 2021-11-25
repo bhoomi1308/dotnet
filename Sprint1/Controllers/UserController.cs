@@ -62,7 +62,7 @@ namespace Sprint1.Controllers
         {
             Users user = GetUser(id);
      
-            ist.Remove(user);
+            list.Remove(user);
      
         }
     }
