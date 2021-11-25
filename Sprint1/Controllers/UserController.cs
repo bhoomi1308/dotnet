@@ -58,12 +58,12 @@ namespace Sprint1.Controllers
 
         [HttpDelete]
 
-        public bool DeleteUser(int id)
+        public void DeleteUser(int id)
         {
-            List<Users> list = new List<Users>();
-            var result = list.FirstOrDefault(a => a.UserId == id);
-            var deleted = list.Remove(result);
-            return deleted; //return true if user with id is deleted otherwise false
+            Users user = GetUser(id);
+     
+            ist.Remove(user);
+     
         }
     }
 }
